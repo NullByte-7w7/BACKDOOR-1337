@@ -28,8 +28,9 @@ The **Shell Persistent** tool is designed to help you understand and enhance the
 Modify the IP address in the source code to your own IP.
 
 Run the script as the root user on your target machine:
-
-sudo ./shell_persistent.sh
+   
+   ```bash
+    sudo ./shell_persistent.sh
 
 Ransomware Alert
 

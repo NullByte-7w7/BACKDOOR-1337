@@ -4,7 +4,6 @@
 # on the ip and port, choice the type from payload or connection reverse.
 # CREATE IN 2023 BY DARKSEC
 
-darksec="$PWD"
 
 echo "*******|-NEED RUN WITH ROOT!-|******"
 echo "HELLO FRIEND, HOW ARE YOU?"

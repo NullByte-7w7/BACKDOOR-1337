@@ -24,7 +24,7 @@ The **Shell Persistent** tool is designed to help you understand and enhance the
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/DARKSECshell/shell_persistent.git
+git clone https://github.com/DARKSECshell/shell_persistent.git
 Modify the IP address in the source code to your own IP.
 
 Run the script as the root user on your target machine:

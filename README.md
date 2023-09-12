@@ -34,12 +34,12 @@ Run the script as the root user on your target machine:
 ```
 Ransomware Alert
 
-This script contains a ransomware component with a payload that encrypts the target's crontab. This is for educational purposes only to demonstrate potential vulnerabilities. Do not use this ransomware component for any malicious activities.
+This script includes a ransomware component with a payload designed to encrypt the target's crontab. This is strictly for educational purposes, intended to demonstrate potential vulnerabilities. Do not utilize this ransomware component for any malicious activities.
 
 Legal Disclaimer
 
-Use this tool responsibly and in compliance with all applicable laws and regulations. Unauthorized use, distribution, or modification of this tool for malicious purposes is strictly prohibited. The author and contributors of this tool are not responsible for any misuse or illegal activities conducted with it.
+Please use this tool responsibly and in strict compliance with all applicable laws and regulations. Unauthorized use, distribution, or modification of this tool for malicious purposes is strictly prohibited. The author and contributors of this tool bear no responsibility for any misuse or illegal activities carried out with it.
 
 Contributing
 
-Feel free to contribute to this project by submitting issues or pull requests. Please ensure your contributions align with ethical coding practices.
+We welcome contributions to this project. Feel free to contribute by submitting issues or pull requests. Please ensure that your contributions adhere to ethical coding practices.

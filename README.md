@@ -34,7 +34,7 @@ Run the script as the root user on your target machine:
 ```
 ## Ransomware Alert
 
-**This script includes a ransomware component with a payload designed to encrypt the target's crontab. This is strictly for educational purposes, intended to demonstrate potential vulnerabilities. Do not utilize this ransomware component for any malicious activities.
+This script includes a ransomware component with a payload designed to encrypt the target's crontab. This is strictly for educational purposes, intended to demonstrate potential vulnerabilities. Do not utilize this ransomware component for any malicious activities.
 
 ## Legal Disclaimer
 

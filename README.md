@@ -30,8 +30,8 @@ Modify the IP address in the source code to your own IP.
 Run the script as the root user on your target machine:
    
    ```bash
-    sudo ./shell_persistent.sh
-
+ sudo ./shell_persistent.sh
+```
 Ransomware Alert
 
 This script contains a ransomware component with a payload that encrypts the target's crontab. This is for educational purposes only to demonstrate potential vulnerabilities. Do not use this ransomware component for any malicious activities.

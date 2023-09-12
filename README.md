@@ -32,14 +32,14 @@ Run the script as the root user on your target machine:
    ```bash
  sudo ./shell_persistent.sh
 ```
-Ransomware Alert
+## Ransomware Alert
 
-This script includes a ransomware component with a payload designed to encrypt the target's crontab. This is strictly for educational purposes, intended to demonstrate potential vulnerabilities. Do not utilize this ransomware component for any malicious activities.
+**This script includes a ransomware component with a payload designed to encrypt the target's crontab. This is strictly for educational purposes, intended to demonstrate potential vulnerabilities. Do not utilize this ransomware component for any malicious activities.
 
-Legal Disclaimer
+## Legal Disclaimer
 
 Please use this tool responsibly and in strict compliance with all applicable laws and regulations. Unauthorized use, distribution, or modification of this tool for malicious purposes is strictly prohibited. The author and contributors of this tool bear no responsibility for any misuse or illegal activities carried out with it.
 
-Contributing
+## Contributing
 
 We welcome contributions to this project. Feel free to contribute by submitting issues or pull requests. Please ensure that your contributions adhere to ethical coding practices.

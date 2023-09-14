@@ -30,7 +30,7 @@ Modify the IP address in the source code to your own IP.
 Run the script as the root user on your target machine:
    
    ```bash
- sudo ./shell_persistent.sh
+ sudo ./darksec.sh
 ```
 
 ## Legal Disclaimer

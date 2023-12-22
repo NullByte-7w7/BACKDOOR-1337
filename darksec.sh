@@ -44,3 +44,5 @@ rm -rf darksec.sh
 
 # SUCCESS, BACKDOOR RUNNING
 echo -n '[+] SUCCESS BACKDOOR RUNNING!'
+
+fi

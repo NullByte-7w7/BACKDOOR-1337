@@ -3,7 +3,7 @@
 
 Ow0=clear
 
-if [ $(/usr/bin/whoami) == "root" ]; then
+if [ $(/usr/bin/whoami) = "root" ]; then
 
 	$Ow0
 	echo "YOUR PAYLOAD FOR REVERSE SHELL"

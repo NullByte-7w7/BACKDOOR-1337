@@ -1,6 +1,6 @@
 # SHELL PERSISTENT
 
-![Image](https://github.com/DARKSECshell/shell_persistent/assets/121623691/93b2f403-b4f3-452f-9ca9-ac996a620ecd)
+![image](https://github.com/user-attachments/assets/1bd4c51c-14de-4472-abe5-6d96aa715c92)
 
 **Disclaimer: This tool is intended for educational and ethical purposes only. The use of this script for any malicious activity is strictly prohibited.**
 

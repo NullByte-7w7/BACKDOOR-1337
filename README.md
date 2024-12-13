@@ -1,6 +1,7 @@
 # SHELL PERSISTENT
 
-![image](https://github.com/user-attachments/assets/1bd4c51c-14de-4472-abe5-6d96aa715c92)
+![image](https://github.com/user-attachments/assets/0fbf4e98-d8e8-4752-83df-a75d9db719f7)
+
 
 **Disclaimer: This tool is intended for educational and ethical purposes only. The use of this script for any malicious activity is strictly prohibited.**
 

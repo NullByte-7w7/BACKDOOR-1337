@@ -7,7 +7,7 @@
 
 ## Introduction
 
-The **Shell Persistent** tool is designed to help you understand and enhance the security of your own systems or networks. It provides a controlled environment to test and analyze vulnerabilities, allowing you to strengthen your defenses.
+this backdoor is to ***fuck systems***, keeping ***persistence and hidden in the network***, soon I will bring more update and features allowing to be run on any machine and of course, bringing persistence and without much dependence as libs. I will port both for python/Golang language. ***do not think of it as a tool, but as a hammer that will help you to break things***, good luck and good HACK. intended for CTF/Pentest/hacking_infra
 
 ## Features
 

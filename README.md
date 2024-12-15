@@ -29,7 +29,7 @@ The **Shell Persistent** tool is designed to help you understand and enhance the
 Run the script as the root user on your target machine:
    
    ```bash
- sudo ./darksec.sh
+ python3 h1d3_c4t.py
 ```
 
 ## Legal Disclaimer

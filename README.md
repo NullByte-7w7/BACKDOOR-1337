@@ -26,7 +26,7 @@ this backdoor is to ***fuck systems***, keeping ***persistence and hidden in the
 ```bash
 $ git clone https://github.com/NullByte-7w7/H1D3-C4T.git
 ```
-Run the script as the root user on your target machine:
+Run the script as the root user on your target machine (before it runs, don't be a kiddie script look at the source code understand what's going on, good luck, and good hack):
 
 ```bash
 $ python3 h1d3_c4t.py

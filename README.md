@@ -11,9 +11,11 @@ The **Shell Persistent** tool is designed to help you understand and enhance the
 
 ## Features
 
-- Gain access to a target machine after they run the script (as the root user).
+- Gain access to a target machine after they run the script.
 - Maintain a persistent shell connection with the victim's machine.
-- Compatible with Debian-based, arch systems.
+- Compatible with Debian-based, Windows.
+- Anti-Debuggers (Search Process Runnning GDB,GHIDRA...)
+- connection cryptograph
 
 ## Warning
 

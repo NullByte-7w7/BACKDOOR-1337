@@ -32,9 +32,9 @@ Run the script as the root user on your target machine (***before it runs, don't
 $ python3 h1d3_c4t.py
 ```
 
-## Legal Disclaimer
+## SUPPORT
 
-Please use this tool responsibly and in strict compliance with all applicable laws and regulations. Unauthorized use, distribution, or modification of this tool for malicious purposes is strictly prohibited. The author and contributors of this tool bear no responsibility for any misuse or illegal activities carried out with it.
+any questions about talk to me by discord => ***_darksec***
 
 
 

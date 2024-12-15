@@ -42,4 +42,4 @@ any questions about talk to me by discord => ***_darksec***
 
 ## Contributing
 
-We welcome contributions to this project. Feel free to contribute by submitting issues or pull requests. Please ensure that your contributions adhere to ethical coding practices.
+We welcome contributions to this project. Feel free to contribute by submitting issues or pull requests.

@@ -42,4 +42,4 @@ any questions about talk to me by discord => ***_darksec***
 
 ## Contributing
 
-We welcome contributions to this project. Feel free to contribute by submitting issues or pull requests.
+We welcome contributions to this project. Feel free to contribute by submitting issues or pull requests. ***if you want to help me financially here is my wallet: ***

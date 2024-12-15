@@ -73,7 +73,6 @@ def external_backdoor_linux():
 
 
 print(Fore.CYAN + r'''
-    FUCK YOU BITKILL
        
            \`*-.                    
             )  _`-.                 

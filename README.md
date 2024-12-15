@@ -17,7 +17,7 @@ this backdoor is to ***fuck systems***, keeping ***persistence and hidden in the
 
 ## Warning
 
-**Please use this tool responsibly and only on systems you have explicit permission to test. Unauthorized access or any malicious activities are illegal and unethical.**
+**use this responsibly, I do not care about any illegal act. I have no responsibility for your acts.**
 
 ## Getting Started
 

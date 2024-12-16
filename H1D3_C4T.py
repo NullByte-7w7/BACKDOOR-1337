@@ -60,8 +60,6 @@ def internal_backdoor_linux():
 
 
 
-
-
 def external_backdoor_linux():
 
     print("[!] BACKDOOR IS EXTERNAL")

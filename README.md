@@ -34,7 +34,7 @@ $ python3 h1d3_c4t.py
 
 ## SUPPORT
 
-any questions about talk to me by discord => ***_darksec***
+any questions about talk to me by discord => ***darksec_***
 
 
 

